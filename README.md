@@ -9,7 +9,7 @@ A small utility that generates a stream of images simulating the good ol' DVD sc
 
 ## Installation
 
-In the releases page, the installable wheel can be found. Download it and install it using `pip install -U dvd-*-py3-none-any.whl`. It might be useful to use a `virtualenv` to install the package.
+In the [releases page][releases-page], the installable wheel can be found. Download it and install it using `pip install -U dvd-*-py3-none-any.whl`. It might be useful to use a `virtualenv` to install the package.
 
 ## Usage
 
@@ -62,4 +62,5 @@ dvd --width 1920 --height 1080 --fps 30 -- \
 
 To setup the development environment, install it using `pipenv install --dev` and start developing from it. To build the package, run `python -m build` (or `pipenv run python -m build`) to generate the wheel package.
 
-  - [ffmpeg]: https://ffmpeg.org
+  [ffmpeg]: https://ffmpeg.org
+  [releases-page]: https://github.com/MajorcaDevs/dvd/releases
