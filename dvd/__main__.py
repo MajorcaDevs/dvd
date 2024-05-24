@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, UTC
 
 from .args import parse_arguments
 from .ffmpeg_runner import run_ffmpeg
@@ -26,15 +26,15 @@ def main():
     )
 
     i = 1
-    last_print = datetime.utcnow() - timedelta(seconds=2)
+    last_print = datetime.now(UTC) - timedelta(seconds=2)
     for x, y, recalculate in points:
-        start_frame_time = datetime.utcnow()
+        start_frame_time = datetime.now(UTC)
 
         if recalculate:
             dvd_logo_color = generate_random_color_dvd_logo(dvd_logo)
         generate_frame((int(x), int(y)), resolution, dvd_logo, dvd_logo_color).save(ffmpeg.stdin, 'BMP')
 
-        end_frame_time = datetime.utcnow()
+        end_frame_time = datetime.now(UTC)
         took = end_frame_time - start_frame_time
         tt = took.seconds + took.microseconds / 1000000
         if (end_frame_time - last_print).seconds >= 1:
