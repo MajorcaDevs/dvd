@@ -38,11 +38,11 @@ def main():
         took = end_frame_time - start_frame_time
         tt = took.seconds + took.microseconds / 1000000
         if (end_frame_time - last_print).seconds >= 1:
-            print(f'\r{i * 100 // total_points}% {i}: ({int(x)}, {int(y)}) - {tt}s       \033[7D', end='')
+            print(f'\r{i * 100 // total_points}{' seconds,' if args.live else '%'} {i}: ({int(x)}, {int(y)}) - {tt}s       \033[7D', end='')
             last_print = end_frame_time
         i += 1
 
-    print(f'\r{i * 100 // total_points}% {i}: ({int(x)}, {int(y)}) - {tt}s       ')
+    print(f'\r{i * 100 // total_points}{' seconds,' if args.live else '%'} {i}: ({int(x)}, {int(y)}) - {tt}s       ')
     print('Waiting to ffmpeg to finish')
     ffmpeg.stdin.close()
     ffmpeg.wait()
