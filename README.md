@@ -4,7 +4,7 @@ A small utility that generates a stream of images simulating the good ol' DVD sc
 
 ## Requirements
 
-- Python 3.7 or higher
+- Python 3.11 or higher
 - [`ffmpeg`][ffmpeg] installed and accessible
 
 ## Installation
@@ -41,7 +41,7 @@ dvd --width 3840 --height 2160 --fps 60 --duration 36000 -- \
 ### Live streaming
 
 ```bash
-dvd --width 1920 --height 1080 --fps 30 -- \
+dvd --width 1920 --height 1080 --fps 30 --live -- \
     # extra input: blank audio
     -f lavfi -i 'anullsrc=channel_layout=stereo:sample_rate=44100' \
     # join audio and generated images stream
@@ -60,7 +60,8 @@ dvd --width 1920 --height 1080 --fps 30 -- \
 
 ## Develop
 
-To setup the development environment, install it using `pipenv install --dev` and start developing from it. To build the package, run `python -m build` (or `pipenv run python -m build`) to generate the wheel package.
+To setup the development environment, install it using `poetry install` and start developing from it. To build the package, run `poetry build` to generate the wheel package. To install poetry, follow [their guide][poetry].
 
   [ffmpeg]: https://ffmpeg.org
   [releases-page]: https://github.com/MajorcaDevs/dvd/releases
+  [poetry]: https://python-poetry.org/docs/
