@@ -16,7 +16,7 @@ dvd = "dvd.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-Pillow = "^10.3"
+Pillow = "^12.1"
 
 
 [build-system]
