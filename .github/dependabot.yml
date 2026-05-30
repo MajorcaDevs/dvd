@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "poetry"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "melchor629"
