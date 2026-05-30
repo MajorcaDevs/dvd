@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "poetry"
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
@@ -9,5 +9,3 @@ updates:
     reviewers:
       - "melchor629"
       - "raulwhite"
-    update-types:
-      - "dependency-update"
