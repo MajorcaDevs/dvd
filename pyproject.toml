@@ -19,7 +19,7 @@ packages = [
 include = ["dvd/dvd_logo.png"]
 
 dependencies = [
-    "Pillow (>=12.3.0,<13.0)",
+    "Pillow (>=13.0.0,<14.0)",
 ]
 
 [project.scripts]
